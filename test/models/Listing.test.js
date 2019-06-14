@@ -4,7 +4,7 @@ const Listing = require('../../lib/models/Listing');
 
 describe('Listing Model', () => {
   beforeAll(() => {
-    return mongoose.connect('mongodb://localhost:27017/unwasted', {
+    return mongoose.connect('mongodb://localhost:27017/unwastedtest', {
       useCreateIndex: true,
       useFindAndModify: false,
       useNewUrlParser: true

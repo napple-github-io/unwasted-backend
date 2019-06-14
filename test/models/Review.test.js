@@ -4,7 +4,7 @@ const Review = require('../../lib/models/Review');
 
 describe('Review Model', () => {
   beforeAll(() => {
-    return mongoose.connect('mongodb://localhost:27017/napple', {
+    return mongoose.connect('mongodb://localhost:27017/unwastedtest', {
       useCreateIndex: true,
       useFindAndModify: false,
       useNewUrlParser: true

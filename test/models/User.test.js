@@ -5,7 +5,7 @@ const { untokenize } = require('../../lib/utils/token');
 
 describe('User model', () =>{
   beforeAll(() => {
-    return mongoose.connect('mongodb://localhost:27017/napple', {
+    return mongoose.connect('mongodb://localhost:27017/unwastedtest', {
       useCreateIndex: true,
       useFindAndModify: false,
       useNewUrlParser: true
