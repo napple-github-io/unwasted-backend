@@ -4,7 +4,7 @@ const Listing = require('../../lib/models/Listing');
 
 describe('Listing Model', () => {
   beforeAll(() => {
-    return mongoose.connect('mongodb://localhost:27017/napple', {
+    return mongoose.connect('mongodb://localhost:27017/unwasted', {
       useCreateIndex: true,
       useFindAndModify: false,
       useNewUrlParser: true
@@ -23,8 +23,9 @@ describe('Listing Model', () => {
     title: 'carrots',
     user: new mongoose.Types.ObjectId(),
     location: {
-      address: '555 high st.',
-      zip: '555'
+      street: '555 high st.',
+      state: 'AZ',
+      zip: '85032'
     },
     category: 'produce',
     dietary: { dairy: true, gluten: true }
@@ -36,8 +37,9 @@ describe('Listing Model', () => {
       _id: expect.any(mongoose.Types.ObjectId),
       user: expect.any(mongoose.Types.ObjectId),
       location: {
-        address: '555 high st.',
-        zip: '555'
+        street: '555 high st.',
+        state: 'AZ',
+        zip: '85032'
       },
       category: 'produce',
       dietary: { dairy: true, gluten: true },
