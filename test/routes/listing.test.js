@@ -82,9 +82,10 @@ describe('listing routes', () => {
           .send({ ...listing, user: createdUser.body._id })
           .then(createdListing => {
             return request(app)
-              .get(`/api/v1/listings?listing=${createdListing.body._id}`)
+              .get(`/api/v1/listings/${createdListing.body._id}`)
               .then(foundListing => {
-                expect(foundListing.body[0]).toEqual({
+                console.log(foundListing.body);
+                expect(foundListing.body).toEqual({
                   _id: expect.any(String),
                   archived: false,
                   category: 'produce',
