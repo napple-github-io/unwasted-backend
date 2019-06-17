@@ -28,6 +28,7 @@
   },
   "homepage": "https://github.com/napple-github-io/unwasted-backend#readme",
   "dependencies": {
+    "@sendgrid/mail": "^6.4.0",
     "add-subtract-date": "^1.0.14",
     "auth0": "^2.17.1",
     "bcryptjs": "^2.4.3",
