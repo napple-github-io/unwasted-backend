@@ -72,4 +72,38 @@ describe('listing routes', () => {
           });
       });
   });
+  it.only('can get a listing by id', () => {
+    return request(app)
+      .post('/api/v1/auth/signup')
+      .send(user)
+      .then(createdUser => {
+        return request(app)
+          .post('/api/v1/listings/new')
+          .send({ ...listing, user: createdUser.body._id })
+          .then(createdListing => {
+            return request(app)
+              .get(`/api/v1/listings?listing=${createdListing.body._id}`)
+              .then(foundListing => {
+                expect(foundListing.body[0]).toEqual({
+                  _id: expect.any(String),
+                  archived: false,
+                  category: 'produce',
+                  dietary: {
+                    dairy: true,
+                    gluten: true,
+                  },
+                  expiration: expect.any(String),
+                  location: {
+                    state: 'AZ',
+                    street: '555 high st.',
+                    zip: '85032',
+                  },
+                  postedDate: expect.any(String),
+                  title: 'title',
+                  user: createdUser.body._id
+                });
+              });
+          });
+      });
+  });
 });
