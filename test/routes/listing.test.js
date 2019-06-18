@@ -78,7 +78,7 @@ describe('listing routes', () => {
       .send(user)
       .then(createdUser => {
         return request(app)
-          .post('/api/v1/listings/new')
+          .post('/api/v1/listings/')
           .send({ ...listing, user: createdUser.body._id })
           .then(createdListing => {
             return request(app)
