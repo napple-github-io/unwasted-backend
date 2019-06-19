@@ -26,7 +26,11 @@ describe('auth routes', () => {
     firstName: 'Sean',
     lastName: 'Michael',
     authId: 'cjasjd',
-    location: { street: '1919 NW Quimby St., Portland, Or', state: 'MO', zip: '97209' }
+    location: {
+      street: '1919 NW Quimby St., Portland, Or',
+      state: 'MO',
+      zip: '97209'
+    }
   };
 
   it('creates a user in db', () => {
