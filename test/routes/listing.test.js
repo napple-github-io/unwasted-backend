@@ -84,7 +84,6 @@ describe('listing routes', () => {
             return request(app)
               .get(`/api/v1/listings/${createdListing.body._id}`)
               .then(foundListing => {
-                console.log(foundListing.body);
                 expect(foundListing.body).toEqual({
                   _id: expect.any(String),
                   archived: false,
