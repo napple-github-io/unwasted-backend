@@ -12,7 +12,7 @@ app.listen(PORT, () => {
     archive();
     powerCheck();
     ratingCheck();
-  }, (1000 * 60));
+  }, (1000));
   // eslint-disable-next-line no-console
   console.log(`LISTENING on ${PORT}`);
 });
