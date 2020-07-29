@@ -30,7 +30,7 @@
   "dependencies": {
     "@sendgrid/mail": "^6.4.0",
     "add-subtract-date": "^1.0.14",
-    "auth0": "^2.17.1",
+    "auth0": "^2.27.1",
     "aws-sdk": "^2.479.0",
     "bcryptjs": "^2.4.3",
     "body-parser": "^1.19.0",
